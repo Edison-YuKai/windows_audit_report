@@ -31,7 +31,7 @@
 
   body {
     height: 100vh;
-    background-color: white;
+    background-color: whitesmoke;
     margin: 0rem;
     display: grid;
     place-items: center;
@@ -43,8 +43,8 @@
   }
   
   .word {
-    color: darkslategray;
-    font-size: clamp(2rem, 8vw, 10rem);
+    color: #2d3340;
+    font-size: clamp(0.2rem, 9vw, 9rem);
     font-family: "Rubik", sans-serif;
     margin: 0rem;
     text-transform: uppercase;
@@ -133,7 +133,16 @@
   }
   
   .fancy:hover > .outer:nth-child(12) {
-    transform: translate(120%, -30%) rotate(-10deg);
+    transform: translate(50%, -30%) rotate(-10deg);
+  }
+  .fancy:hover > .outer:nth-child(13) {
+    transform: translate(70%, -50%) rotate(-35deg);
+  }
+  .fancy:hover > .outer:nth-child(14) {
+    transform: translate(80%, 30%) rotate(30deg);
+  }
+  .fancy:hover > .outer:nth-child(15) {
+    transform: translate(80%, 10%) rotate(50deg);
   }
   
   /* -- YouTube Link Styles -- */
@@ -187,4 +196,9 @@
     color: white;
     font-family: "Rubik", sans-serif;
     font-weight: 500;
+  }
+
+  #section {
+    height: max-content;
+    width: max-content;
   }

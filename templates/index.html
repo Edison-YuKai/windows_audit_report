@@ -7,8 +7,6 @@
     <!-- Include Plotly.js library -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-
-    
   </head>
   <body>
     <div id="header">
@@ -19,22 +17,16 @@
         </div>
       
         <div class="line">
-          <p class="word fancy" id="title">Automated</p>
-          <p class="word ">Audit</p>
+          <p class="word fancy" id="title">Automated Audit</p>
         </div>
-      
-        <div class="line">
-          <p class="word">Program</p>
-        </div>
-        
           <script src="{{ url_for('static', filename='header.js') }}"></script>
       </div>
-  
-    </div>
+    </div></div>
+
     <a href="/section"><button>section</button></a>
 
     <!-- Embed the Plotly chart -->
-    <div>{{ chart_html | safe }}</div>
+    <div id="chart">{{ chart_html | safe }}</div>
 
     <table>
       <thead>
@@ -55,6 +47,6 @@
           </tr>
           {% endfor %}
       </tbody>
-  </table>
+    </table>
   </body>
 </html>
