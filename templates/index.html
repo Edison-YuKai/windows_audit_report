@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows 10 Automated Audit Program</title>
+    <!-- Include Plotly.js library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    
+  </head>
+  <body>
+    <div id="header">
+      <div id="text"><div id="text">
+        <div class="line">
+          <p class="word">Windows</p>
+          <p class="word">10</p>
+        </div>
+      
+        <div class="line">
+          <p class="word fancy" id="title">Automated</p>
+          <p class="word ">Audit</p>
+        </div>
+      
+        <div class="line">
+          <p class="word">Program</p>
+        </div>
+        
+          <script src="{{ url_for('static', filename='header.js') }}"></script>
+      </div>
+  
+    </div>
+    <a href="/section"><button>section</button></a>
+
+    <!-- Embed the Plotly chart -->
+    <div>{{ chart_html | safe }}</div>
+
+    <table>
+      <thead>
+          <tr>
+              <th>isSuccess</th>
+              <th>section</th>
+              <th>name</th>
+              <th>details</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for row in data %}
+          <tr>
+              <td>{{ row['isSuccess'] }}</td>
+              <td>{{ row['section'] }}</td>
+              <td>{{ row['name'] }}</td>
+              <td>{{ row['details'] }}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+  </body>
+</html>
