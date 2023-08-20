@@ -26,16 +26,19 @@
   #header {
     position: relative; /* Add this */
     z-index: 100; /* Set a higher z-index value */
+    padding: 20px;
   }
   
+  .fancy{
+    padding-left: 24px;
+  }
 
   body {
     background-color: whitesmoke;
     display: grid;
     place-items: center;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
-    padding: 24px;
   }
   
   .line {
@@ -45,15 +48,11 @@
   
   .word {
     color: #2d3340;
-    font-size: clamp(0.2rem, 9vw, 9rem);
+    font-size: 48px;
     font-family: "Rubik", sans-serif;
     margin: 0rem;
     text-transform: uppercase;
     transition: opacity 250ms ease;
-  }
-  
-  a {
-    text-decoration: none;
   }
   
   #text:has(.fancy:hover) .word:not(.fancy:hover) {
@@ -170,9 +169,9 @@ h2{
 /* Table Styles */
 
 .table-wrapper{
-  margin: 10px 70px 70px 16px;
+  margin: 16px 48px 48px 16px;
   box-shadow: 0px 8px 16px 0px rgba( 0, 0, 0, 0.1 );
-  border: 2px solid #2a2a2a
+  border: 2px solid #2a2a2a;
 }
 
 .fl-table {
@@ -181,25 +180,24 @@ h2{
   font-weight: normal;
   border: none;
   border-collapse: collapse;
-  width: 100%;
-  max-width: 100%;
-  white-space: nowrap;
+  width: 80vw;
   background-color: white;
 }
 
 .fl-table td, .fl-table th {
-  text-align: center;
+  text-align: left;
   padding: 8px;
 }
 
 .fl-table td {
   border-right: 1px solid #f8f8f8;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .fl-table thead th {
   color: #ffffff;
   background: #2a2a2a;
+  font-size: 18px;
 }
 
 
@@ -210,6 +208,12 @@ h2{
 
 .fl-table tr:nth-child(even) {
   background: #F8F8F8;
+}
+.fl-table th:nth-child(1) {
+  min-width: 10vw;
+}
+.fl-table th:nth-child(4) {
+  min-width: 15vw;
 }
 
 /* Responsive */

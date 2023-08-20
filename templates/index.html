@@ -18,12 +18,9 @@
       <div id="text">
         <div id="text">
           <div class="line">
-            <p class="word">Windows</p>
-            <p class="word">10</p>
-          </div>
-
-          <div class="line">
-            <p class="word fancy" id="title">Automated Audit</p>
+            <p class="word fancy" id="windows">Windows 10</p>
+            <p class="word fancy" id="automated">Automated</p>
+            <p class="word fancy" id="audit">Audit</p>
           </div>
           <script src="{{ url_for('static', filename='header.js') }}"></script>
         </div>
@@ -48,28 +45,28 @@
         </thead>
         <tbody>
           <tr>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
+            <td>1.1.1</td>
+            <td>Ensure 'Enforce password history' is set to '24 or more password(s)'in windows 11</td>
+            <td>The longer a user uses the same password, the greater the chance that an attacker can determine the password through brute force attacks.</td>
+            <td>Success</td>
           </tr>
           <tr>
-            <td>Content 2</td>
-            <td>Content 2</td>
-            <td>Content 2</td>
-            <td>Content 2</td>
+            <td>1.1.2</td>
+            <td>Ensure 'Minimum password age' is set to '1 or more day(s)'</td>
+            <td>Users may have favorite passwords that they like to use because they are easy to remember and they believe that their password choice is secure from compromise.</td>
+            <td>Failure</td>
           </tr>
           <tr>
-            <td>Content 3</td>
-            <td>Content 3</td>
-            <td>Content 3</td>
-            <td>Content 3</td>
+            <td>1.1.4</td>
+            <td>Ensure 'Minimum password length' is set to '14 or more character(s)'</td>
+            <td>Password Policy settings (section 1.1) and Account Lockout Policy settings (section 1.2) must be applied via the Default Domain Policy GPO in order to be globally in effect on domain user accounts as their default behavior.</td>
+            <td>Success</td>
           </tr>
           <tr>
-            <td>Content 4</td>
-            <td>Content 4</td>
-            <td>Content 4</td>
-            <td>Content 4</td>
+            <td>1.1.2</td>
+            <td>Ensure 'Maximum password age' is set to '365 or fewer days, but not 0'</td>
+            <td>The longer a password exists the higher the likelihood that it will be compromised by a brute force attack, by an attacker gaining general knowledge about the user.</td>
+            <td>Fail</td>
           </tr>
         </tbody>
       </table>

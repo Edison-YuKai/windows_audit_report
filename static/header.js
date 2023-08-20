@@ -35,4 +35,6 @@ const enhance = id => {
   });
 }
 
-enhance("title");
+enhance("automated");
+enhance("audit");
+enhance("windows");
