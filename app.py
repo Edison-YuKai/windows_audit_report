@@ -3,8 +3,11 @@ import plotly.express as px
 import pandas as pd
 import plotly.offline as pyo
 from jinja2 import Environment, FileSystemLoader
+from tabulate import tabulate
+
 
 mock_data = [
+    {'isSuccess': 'Result', 'section': 'Index','name': 'Title','details': 'Details'},
     {'isSuccess': True, 'section': 'Section A', 'name': 'Item 1', 'details': 'Details 1'},
     {'isSuccess': False, 'section': 'Section B', 'name': 'Item 2', 'details': 'Details 2'},
     {'isSuccess': True, 'section': 'Section A', 'name': 'Item 3', 'details': 'Details 3'},
@@ -39,7 +42,7 @@ def index():
     index_template = env.get_template('index.html')
 
     # Render the template with the chart HTML
-    rendered_template = index_template.render(chart_html=chart_html, data=mock_data, url_for=url_for)
+    rendered_template = index_template.render(chart_html=chart_html, data=tabulate(mock_data, tablefmt='html', headers='firstrow'), url_for=url_for)
 
     return rendered_template
 

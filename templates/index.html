@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="{{ url_for('static', filename='table.js') }}"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Windows 10 Automated Audit Program</title>
     <!-- Include Plotly.js library -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
   </head>
   <body>
     <div id="header">
-      <div id="text"><div id="text">
-        <div class="line">
-          <p class="word">Windows</p>
-          <p class="word">10</p>
-        </div>
-      
-        <div class="line">
-          <p class="word fancy" id="title">Automated Audit</p>
-        </div>
-          <script src="{{ url_for('static', filename='header.js') }}"></script>
-      </div>
-    </div></div>
+      <div id="text">
+        <div id="text">
+          <div class="line">
+            <p class="word">Windows</p>
+            <p class="word">10</p>
+          </div>
 
-    <a href="/section"><button>section</button></a>
+          <div class="line">
+            <p class="word fancy" id="title">Automated Audit</p>
+          </div>
+          <script src="{{ url_for('static', filename='header.js') }}"></script>
+        </div>
+      </div>
+    </div>
 
     <!-- Embed the Plotly chart -->
     <div id="chart">{{ chart_html | safe }}</div>
-
-    <table>
-      <thead>
+    <div>
+      <h4>Filter by:</h4>
+      <a href="/section"><button>section</button></a>
+    </div>
+    <div class="table-wrapper">
+      <table class="fl-table" aria-describedby="table">
+        <thead>
           <tr>
-              <th>isSuccess</th>
-              <th>section</th>
-              <th>name</th>
-              <th>details</th>
+            <th>Index</th>
+            <th>Title</th>
+            <th>Details</th>
+            <th>Result</th>
           </tr>
-      </thead>
-      <tbody>
-          {% for row in data %}
+        </thead>
+        <tbody>
           <tr>
-              <td>{{ row['isSuccess'] }}</td>
-              <td>{{ row['section'] }}</td>
-              <td>{{ row['name'] }}</td>
-              <td>{{ row['details'] }}</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
           </tr>
-          {% endfor %}
-      </tbody>
-    </table>
+          <tr>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+          </tr>
+          <tr>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+          </tr>
+          <tr>
+            <td>Content 4</td>
+            <td>Content 4</td>
+            <td>Content 4</td>
+            <td>Content 4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
