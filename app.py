@@ -32,7 +32,7 @@ def index():
     index_template = env.get_template('index.html')
 
     # Render the template with the chart HTML
-    rendered_template = index_template.render(chart_html=chart_html, data=tabulate(tablefmt='html', headers='firstrow'), url_for=url_for)
+    rendered_template = index_template.render(chart_html=chart_html, url_for=url_for)
 
     return rendered_template
 
