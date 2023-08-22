@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <script src="jquery-3.6.1.min.js"></script>
-    <script src="{{ url_for('static', filename='table.js') }}"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Windows 10 Automated Audit Program</title>
@@ -17,89 +16,15 @@
   </head>
   <body>
     <div id="cover-page" class="page">
-      <div
-        class="content"
-        style="
-          width: 595px;
-          height: 842px;
-          padding-left: 42px;
-          padding-right: 42px;
-          padding-top: 48px;
-          padding-bottom: 48px;
-          background: white;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: flex-start;
-          gap: 489px;
-          display: inline-flex;
-        "
-      >
-        <div
-          style="
-            width: 487px;
-            color: black;
-            font-size: 48px;
-            font-family: Inter;
-            font-weight: 600;
-            word-wrap: break-word;
-          "
-        >
-          Windows Automated Audit Report
-        </div>
-        <div
-          style="
-            align-self: stretch;
-            height: 108px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 60px;
-            display: flex;
-          "
-        >
-          <div
-            style="
-              align-self: stretch;
-              justify-content: space-between;
-              align-items: flex-start;
-              gap: 15px;
-              display: inline-flex;
-            "
-          >
-            <div
-              style="
-                color: black;
-                font-size: 24px;
-                font-family: Inter;
-                font-weight: 500;
-                word-wrap: break-word;
-              "
-            >
-              Computer name:
-            </div>
-            <div
-              style="
-                color: black;
-                font-size: 24px;
-                font-family: Inter;
-                font-weight: 500;
-                word-wrap: break-word;
-              "
-            >
-              Luminix ProBook X4500
-            </div>
+      <div style="width: 595px; height: 842px; padding-left: 42px; padding-right: 42px; padding-top: 48px; padding-bottom: 48px; background: white; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
+        <div style="width: 487px; color: black; font-size: 48px; font-family: Inter; font-weight: 600; word-wrap: break-word">Windows Automated Audit Report</div>
+        <img style="align-self: stretch; flex: 1 1 0" src="../static/coverillustration.jpg" />
+        <div style="align-self: stretch; height: 108px; flex-direction: column; justify-content: center; align-items: flex-end; gap: 60px; display: flex">
+          <div style="align-self: stretch; justify-content: space-between; align-items: flex-start; gap: 15px; display: inline-flex">
+            <div style="color: black; font-size: 24px; font-family: Inter; font-weight: 500; word-wrap: break-word">Computer name:</div>
+            <div style="color: black; font-size: 24px; font-family: Inter; font-weight: 500; word-wrap: break-word">Luminix ProBook X4500</div>
           </div>
-          <div
-            style="
-              color: black;
-              font-size: 16px;
-              font-family: Inter;
-              font-weight: 400;
-              word-wrap: break-word;
-            "
-          >
-            Report generated on 2023-08-22 14:30:00
-          </div>
+          <div style="color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Report generated on 2023-08-22 14:30:00</div>
         </div>
       </div>
     </div>
@@ -120,25 +45,7 @@
           display: inline-flex;
         "
       >
-        <div
-          style="
-            color: black;
-            font-size: 24px;
-            font-family: Inter;
-            font-weight: 600;
-            word-wrap: break-word;
-          "
-        >
-          Pie chart summary
-        </div>
-        <div
-          style="
-            align-self: stretch;
-            height: 336px;
-            border-radius: 4px;
-            border: 0.5px black solid;
-          "
-        ></div>
+        <div class="chart" style=" max-width: 800%; overflow: hidden;">{{chart_html}}</div>
         <div
           style="
             color: black;

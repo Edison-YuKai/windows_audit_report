@@ -17,7 +17,8 @@ data = {
 df = pd.DataFrame(data)
 
 # Create a pie chart
-fig = px.pie(df, values='Value', names='Category', title='Remediations Summary')
+fig = px.pie(df, values='Value', names='Category', title='Remediations Summary',
+                 width=500, height=400)
 
 # Generate HTML code for the chart
 chart_html = pyo.plot(fig, output_type='div')
